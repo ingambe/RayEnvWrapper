@@ -1,10 +1,9 @@
-from typing import Optional, List, Union, Sequence, Type, Any
-
 import gym
 import numpy as np
 from ray.rllib import BaseEnv
 from stable_baselines3.common.vec_env import VecEnv
 from stable_baselines3.common.vec_env.base_vec_env import VecEnvIndices, VecEnvStepReturn, VecEnvObs
+from typing import Optional, List, Union, Sequence, Type, Any
 
 import RayEnvWrapper
 
