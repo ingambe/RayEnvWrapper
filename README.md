@@ -101,3 +101,7 @@ Output
 As usual, the `step` method returns a tuple, except that here both the observation, reward, dones and infos are concatenated  
 In this specific example, we have 2 environments per worker.  
 Index 0 and 1 are environments from worker 1; index 1 and 2 are environments from worker 2, etc.
+
+# License
+
+Apache License 2.0
