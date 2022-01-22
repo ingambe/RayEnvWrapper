@@ -5,7 +5,7 @@ You came to the right place !
 
 This package allows you to parallelize your environment using [Ray](https://github.com/ray-project/ray)  
 Not only it allows to run environments in parallel, but it also permit to run multiple sequential environments on each worker  
-For example, you can run 80 workers in parallel, each running 10 sequential environment for a total of 80 * 10 environment  
+For example, you can run 80 workers in parallel, each running 10 sequential environments for a total of 80 * 10 environment  
 This can be useful if your environment is fast and simply running 1 environment per worker leads to too much communication overhead between workers
 
 ## How does it work?
