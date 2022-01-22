@@ -12,7 +12,7 @@ setup(name='RayEnvWrapper',
           "License :: OSI Approved :: MIT License",
           "Operating System :: OS Independent",
       ],
-      python_requires='>=3.6',
+      python_requires='>=3.8',
       install_requires=['gym', 'ray', 'numpy', 'ray[rllib]', 'stable-baselines3'],
       include_package_data=True
 )
