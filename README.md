@@ -84,3 +84,5 @@ Output
 ````
 
 As usual, the `step` method returns a tuple, except that here both the observation, reward, dones and infos are concatenated  
+In this specific example, as we have 2 environment per worker.  
+Index 0 and 1 are environments from worker 1; index 1 and 2 are environments from worker 2, etc.
