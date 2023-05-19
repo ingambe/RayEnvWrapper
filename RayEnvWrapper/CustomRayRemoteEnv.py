@@ -38,8 +38,8 @@ class CustomRayRemoteVectorEnv(BaseEnv):
         self.actors = None  # lazy init
         self.pending = None  # lazy init
 
-        self.observation_space = self.local_env.observation_space
-        self.keys, shapes, dtypes = obs_space_info(self.observation_space)
+        #self.observation_space = self.local_env.observation_space
+        self.keys, shapes, dtypes = obs_space_info(self.local_env.observation_space)
 
         self.buf_obs = OrderedDict(
             [(k, np.zeros((self.num_envs,) + tuple(shapes[k]), dtype=dtypes[k])) for k in self.keys])
@@ -93,7 +93,7 @@ class CustomRayRemoteVectorEnv(BaseEnv):
         return (self._obs_from_buf(), np.copy(self.buf_rews), np.copy(self.buf_dones), deepcopy(self.buf_infos))
 
     def _obs_from_buf(self) -> VecEnvObs:
-        return dict_to_obs(self.observation_space, copy_obs_dict(self.buf_obs))
+        return dict_to_obs(self.local_env.observation_space, copy_obs_dict(self.buf_obs))
 
     @PublicAPI
     def send_actions(self, action_list) -> None:
