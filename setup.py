@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(name='RayEnvWrapper',
-      version='1.0.0',
+      version='1.0.1',
       author="Pierre Tassel",
       author_email="pierre.tassel@aau.at",
       description="OpenAi's gym environment wrapper to vectorize them with Ray",
@@ -18,6 +18,6 @@ setup(name='RayEnvWrapper',
           "Operating System :: OS Independent",
       ],
       python_requires='>=3.8',
-      install_requires=['gym', 'ray', 'numpy', 'ray[rllib]', 'stable-baselines3'],
+      install_requires=['gym', 'ray==2.4.0', 'numpy==1.24.3', 'ray[rllib]==2.4.0', 'stable-baselines3==1.8.0'],
       include_package_data=True
 )
