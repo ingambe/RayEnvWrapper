@@ -18,6 +18,6 @@ setup(name='RayEnvWrapper',
           "Operating System :: OS Independent",
       ],
       python_requires='>=3.8',
-      install_requires=['gym', 'ray==2.4.0', 'numpy==1.24.3', 'ray[rllib]==2.4.0', 'stable-baselines3==1.8.0'],
+      install_requires=['gym', 'ray', 'numpy', 'ray[rllib]', 'stable-baselines3'],
       include_package_data=True
 )
